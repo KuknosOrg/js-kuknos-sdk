@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>lib/call_builder.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Account.html">Account</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Account.html#accountId">accountId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Account.html#incrementSequenceNumber">incrementSequenceNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Account.html#sequenceNumber">sequenceNumber</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="AccountCallBuilder.html">AccountCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Asset.html">Asset</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#.fromOperation">fromOperation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#.native">native</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#equals">equals</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#getAssetType">getAssetType</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#getCode">getCode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#getIssuer">getIssuer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#isNative">isNative</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#toXDRObject">toXDRObject</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="AssetsCallBuilder.html">AssetsCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="CallBuilder.html">CallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="EffectCallBuilder.html">EffectCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="FederationServer.html">FederationServer</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Keypair.html">Keypair</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromBase58Seed">fromBase58Seed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromPublicKey">fromPublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromRawEd25519Seed">fromRawEd25519Seed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromSecret">fromSecret</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.master">master</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.random">random</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#canSign">canSign</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#publicKey">publicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#rawPublicKey">rawPublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#rawSecretKey">rawSecretKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#secret">secret</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#sign">sign</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#verify">verify</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="LedgerCallBuilder.html">LedgerCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Memo.html">Memo</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.fromXDRObject">fromXDRObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.hash">hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.id">id</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.none">none</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.return">return</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.text">text</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#toXDRObject">toXDRObject</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Network.html">Network</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.current">current</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.use">use</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.usePublicNetwork">usePublicNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.useTestNetwork">useTestNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#networkId">networkId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#networkPassphrase">networkPassphrase</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="OfferCallBuilder.html">OfferCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Operation.html">Operation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.accountMerge">accountMerge</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.allowTrust">allowTrust</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.bumpSequence">bumpSequence</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.changeTrust">changeTrust</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.createAccount">createAccount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.createPassiveSellOffer">createPassiveSellOffer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.fromXDRObject">fromXDRObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.inflation">inflation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.manageBuyOffer">manageBuyOffer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.manageData">manageData</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.manageSellOffer">manageSellOffer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.pathPayment">pathPayment</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.payment">payment</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.setOptions">setOptions</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="OperationCallBuilder.html">OperationCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="PaymentCallBuilder.html">PaymentCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Server.html">Server</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="StrKey.html">StrKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodeEd25519PublicKey">decodeEd25519PublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodeEd25519SecretSeed">decodeEd25519SecretSeed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodePreAuthTx">decodePreAuthTx</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodeSha256Hash">decodeSha256Hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodeEd25519PublicKey">encodeEd25519PublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodeEd25519SecretSeed">encodeEd25519SecretSeed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodePreAuthTx">encodePreAuthTx</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodeSha256Hash">encodeSha256Hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.isValidEd25519PublicKey">isValidEd25519PublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.isValidEd25519SecretSeed">isValidEd25519SecretSeed</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TradeAggregationCallBuilder.html">TradeAggregationCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TradesCallBuilder.html">TradesCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Transaction.html">Transaction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#addSignature">addSignature</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#getKeypairSignature">getKeypairSignature</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#hash">hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#sign">sign</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#signatureBase">signatureBase</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#signHashX">signHashX</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#toEnvelope">toEnvelope</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#toXDR">toXDR</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TransactionBuilder.html">TransactionBuilder</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#addMemo">addMemo</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#addOperation">addOperation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#build">build</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#setTimeout">setTimeout</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TransactionCallBuilder.html">TransactionCallBuilder</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AccountResponse">AccountResponse</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AuthImmutableFlag">AuthImmutableFlag</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AuthRequiredFlag">AuthRequiredFlag</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AuthRevocableFlag">AuthRevocableFlag</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#Config">Config</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#FastSigning">FastSigning</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getCurrentServerTime">getCurrentServerTime</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isValidDate">isValidDate</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoHash">MemoHash</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoID">MemoID</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoNone">MemoNone</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoReturn">MemoReturn</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoText">MemoText</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#Networks">Networks</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#OrderbookCallBuilder">OrderbookCallBuilder</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#PathCallBuilder">PathCallBuilder</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#SERVER_TIME_MAP">SERVER_TIME_MAP</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#StellarTomlResolver">StellarTomlResolver</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#TimeoutInfinite">TimeoutInfinite</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/call_builder.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import * as tslib_1 from "tslib";
+import isNode from "detect-node";
+import URI from "urijs";
+import URITemplate from "urijs/src/URITemplate";
+import { BadRequestError, NetworkError, NotFoundError } from "./errors";
+import HorizonAxiosClient from "./horizon_axios_client";
+/* tslint:disable-next-line:no-var-requires */
+var version = require("../package.json").version;
+var EventSource;
+if (isNode) {
+    /* tslint:disable-next-line:no-var-requires */
+    EventSource = require("eventsource");
+}
+else {
+    /* tslint:disable-next-line:variable-name */
+    EventSource = window.EventSource;
+}
+/**
+ * Creates a new {@link CallBuilder} pointed to server defined by serverUrl.
+ *
+ * This is an **abstract** class. Do not create this object directly, use {@link Server} class.
+ * @param {string} serverUrl URL of Horizon server
+ * @class CallBuilder
+ */
+var CallBuilder = /** @class */ (function () {
+    function CallBuilder(serverUrl) {
+        this.url = serverUrl;
+        this.filter = [];
+        this.originalSegments = this.url.segment() || [];
+    }
+    /**
+     * Triggers a HTTP request using this builder's current configuration.
+     * @returns {Promise} a Promise that resolves to the server's response.
+     */
+    CallBuilder.prototype.call = function () {
+        var _this = this;
+        this.checkFilter();
+        return this._sendNormalRequest(this.url).then(function (r) {
+            return _this._parseResponse(r);
+        });
+    };
+    //// TODO: Migrate to async, BUT that's a change in behavior and tests "rejects two filters" will fail.
+    //// It's because async will check within promise, which makes more sense when using awaits instead of Promises.
+    // public async call(): Promise&lt;T> {
+    //   this.checkFilter();
+    //   const r = await this._sendNormalRequest(this.url);
+    //   return this._parseResponse(r);
+    // }
+    //// /* actually equals */
+    //// public call(): Promise&lt;T> {
+    ////   return Promise.resolve().then(() => {
+    ////     this.checkFilter();
+    ////     return this._sendNormalRequest(this.url)
+    ////   }).then((r) => {
+    ////     this._parseResponse(r)
+    ////   });
+    //// }
+    /**
+     * Creates an EventSource that listens for incoming messages from the server. To stop listening for new
+     * events call the function returned by this method.
+     * @see [Horizon Response Format](https://www.stellar.org/developers/horizon/reference/responses.html)
+     * @see [MDN EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+     * @param {object} [options] EventSource options.
+     * @param {function} [options.onmessage] Callback function to handle incoming messages.
+     * @param {function} [options.onerror] Callback function to handle errors.
+     * @param {number} [options.reconnectTimeout] Custom stream connection timeout in ms, default is 15 seconds.
+     * @returns {function} Close function. Run to close the connection and stop listening for new events.
+     */
+    CallBuilder.prototype.stream = function (options) {
+        var _this = this;
+        if (options === void 0) { options = {}; }
+        this.checkFilter();
+        this.url.setQuery("X-Client-Name", "js-stellar-sdk");
+        this.url.setQuery("X-Client-Version", version);
+        // EventSource object
+        var es;
+        // timeout is the id of the timeout to be triggered if there were no new messages
+        // in the last 15 seconds. The timeout is reset when a new message arrive.
+        // It prevents closing EventSource object in case of 504 errors as `readyState`
+        // property is not reliable.
+        var timeout;
+        var createTimeout = function () {
+            timeout = setTimeout(function () {
+                es.close();
+                /* tslint:disable-next-line:no-use-before-declare */
+                es = createEventSource();
+            }, options.reconnectTimeout || 15 * 1000);
+        };
+        var createEventSource = function () {
+            try {
+                es = new EventSource(_this.url.toString());
+            }
+            catch (err) {
+                if (options.onerror) {
+                    options.onerror(err);
+                }
+            }
+            createTimeout();
+            es.onmessage = function (message) {
+                var result = message.data
+                    ? _this._parseRecord(JSON.parse(message.data))
+                    : message;
+                if (result.paging_token) {
+                    _this.url.setQuery("cursor", result.paging_token);
+                }
+                clearTimeout(timeout);
+                createTimeout();
+                if (typeof options.onmessage !== "undefined") {
+                    options.onmessage(result);
+                }
+            };
+            es.onerror = function (error) {
+                if (options.onerror &amp;&amp; error instanceof MessageEvent) {
+                    options.onerror(error);
+                }
+            };
+            return es;
+        };
+        createEventSource();
+        return function close() {
+            clearTimeout(timeout);
+            es.close();
+        };
+    };
+    /**
+     * Sets `cursor` parameter for the current call. Returns the CallBuilder object on which this method has been called.
+     * @see [Paging](https://www.stellar.org/developers/horizon/reference/paging.html)
+     * @param {string} cursor A cursor is a value that points to a specific location in a collection of resources.
+     * @returns {object} current CallBuilder instance
+     */
+    CallBuilder.prototype.cursor = function (cursor) {
+        this.url.setQuery("cursor", cursor);
+        return this;
+    };
+    /**
+     * Sets `limit` parameter for the current call. Returns the CallBuilder object on which this method has been called.
+     * @see [Paging](https://www.stellar.org/developers/horizon/reference/paging.html)
+     * @param {number} number Number of records the server should return.
+     * @returns {object} current CallBuilder instance
+     */
+    CallBuilder.prototype.limit = function (recordsNumber) {
+        this.url.setQuery("limit", recordsNumber.toString());
+        return this;
+    };
+    /**
+     * Sets `order` parameter for the current call. Returns the CallBuilder object on which this method has been called.
+     * @param {"asc"|"desc"} direction Sort direction
+     * @returns {object} current CallBuilder instance
+     */
+    CallBuilder.prototype.order = function (direction) {
+        this.url.setQuery("order", direction);
+        return this;
+    };
+    /**
+     * @private
+     * @returns {void}
+     */
+    CallBuilder.prototype.checkFilter = function () {
+        if (this.filter.length >= 2) {
+            throw new BadRequestError("Too many filters specified", this.filter);
+        }
+        if (this.filter.length === 1) {
+            // append filters to original segments
+            var newSegment = this.originalSegments.concat(this.filter[0]);
+            this.url.segment(newSegment);
+        }
+    };
+    /**
+     * Convert a link object to a function that fetches that link.
+     * @private
+     * @param {object} link A link object
+     * @param {bool} link.href the URI of the link
+     * @param {bool} [link.templated] Whether the link is templated
+     * @returns {function} A function that requests the link
+     */
+    CallBuilder.prototype._requestFnForLink = function (link) {
+        var _this = this;
+        return function (opts) {
+            if (opts === void 0) { opts = {}; }
+            return tslib_1.__awaiter(_this, void 0, void 0, function () {
+                var uri, template, r;
+                return tslib_1.__generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            if (link.templated) {
+                                template = URITemplate(link.href);
+                                uri = URI(template.expand(opts)); // TODO: fix upstream types.
+                            }
+                            else {
+                                uri = URI(link.href);
+                            }
+                            return [4 /*yield*/, this._sendNormalRequest(uri)];
+                        case 1:
+                            r = _a.sent();
+                            return [2 /*return*/, this._parseResponse(r)];
+                    }
+                });
+            });
+        };
+    };
+    /**
+     * Given the json response, find and convert each link into a function that
+     * calls that link.
+     * @private
+     * @param {object} json JSON response
+     * @returns {object} JSON response with string links replaced with functions
+     */
+    CallBuilder.prototype._parseRecord = function (json) {
+        if (!json._links) {
+            return json;
+        }
+        for (var _i = 0, _a = Object.keys(json._links); _i &lt; _a.length; _i++) {
+            var key = _a[_i];
+            var n = json._links[key];
+            // If the key with the link name already exists, create a copy
+            if (typeof json[key] !== "undefined") {
+                json[key + "_attr"] = json[key];
+            }
+            json[key] = this._requestFnForLink(n);
+        }
+        return json;
+    };
+    CallBuilder.prototype._sendNormalRequest = function (initialUrl) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var url;
+            return tslib_1.__generator(this, function (_a) {
+                url = initialUrl;
+                if (url.authority() === "") {
+                    url = url.authority(this.url.authority());
+                }
+                if (url.protocol() === "") {
+                    url = url.protocol(this.url.protocol());
+                }
+                // Temp fix for: https://github.com/stellar/js-stellar-sdk/issues/15
+                url.setQuery("c", String(Math.random()));
+                return [2 /*return*/, HorizonAxiosClient.get(url.toString())
+                        .then(function (response) { return response.data; })
+                        .catch(this._handleNetworkError)];
+            });
+        });
+    };
+    /**
+     * @private
+     * @param {object} json Response object
+     * @returns {object} Extended response
+     */
+    CallBuilder.prototype._parseResponse = function (json) {
+        if (json._embedded &amp;&amp; json._embedded.records) {
+            return this._toCollectionPage(json);
+        }
+        return this._parseRecord(json);
+    };
+    /**
+     * @private
+     * @param {object} json Response object
+     * @returns {object} Extended response object
+     */
+    CallBuilder.prototype._toCollectionPage = function (json) {
+        var _this = this;
+        for (var i = 0; i &lt; json._embedded.records.length; i += 1) {
+            json._embedded.records[i] = this._parseRecord(json._embedded.records[i]);
+        }
+        return {
+            records: json._embedded.records,
+            next: function () { return tslib_1.__awaiter(_this, void 0, void 0, function () {
+                var r;
+                return tslib_1.__generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, this._sendNormalRequest(URI(json._links.next.href))];
+                        case 1:
+                            r = _a.sent();
+                            return [2 /*return*/, this._toCollectionPage(r)];
+                    }
+                });
+            }); },
+            prev: function () { return tslib_1.__awaiter(_this, void 0, void 0, function () {
+                var r;
+                return tslib_1.__generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, this._sendNormalRequest(URI(json._links.prev.href))];
+                        case 1:
+                            r = _a.sent();
+                            return [2 /*return*/, this._toCollectionPage(r)];
+                    }
+                });
+            }); },
+        };
+    };
+    /**
+     * @private
+     * @param {object} error Network error object
+     * @returns {Promise&lt;Error>} Promise that rejects with a human-readable error
+     */
+    CallBuilder.prototype._handleNetworkError = function (error) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            return tslib_1.__generator(this, function (_a) {
+                if (error.response &amp;&amp; error.response.status &amp;&amp; error.response.statusText) {
+                    switch (error.response.status) {
+                        case 404:
+                            return [2 /*return*/, Promise.reject(new NotFoundError(error.response.statusText, error.response.data))];
+                        default:
+                            return [2 /*return*/, Promise.reject(new NetworkError(error.response.statusText, error.response.data))];
+                    }
+                }
+                else {
+                    return [2 /*return*/, Promise.reject(new Error(error.message))];
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    return CallBuilder;
+}());
+export { CallBuilder };
+//# sourceMappingURL=call_builder.js.map</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Jun 14 2019 11:59:30 GMT-0400 (Eastern Daylight Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

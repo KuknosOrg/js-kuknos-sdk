@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>lib/federation_server.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Account.html">Account</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Account.html#accountId">accountId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Account.html#incrementSequenceNumber">incrementSequenceNumber</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Account.html#sequenceNumber">sequenceNumber</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="AccountCallBuilder.html">AccountCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Asset.html">Asset</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#.fromOperation">fromOperation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#.native">native</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#equals">equals</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#getAssetType">getAssetType</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#getCode">getCode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#getIssuer">getIssuer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#isNative">isNative</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Asset.html#toXDRObject">toXDRObject</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="AssetsCallBuilder.html">AssetsCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="CallBuilder.html">CallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="EffectCallBuilder.html">EffectCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="FederationServer.html">FederationServer</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Keypair.html">Keypair</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromBase58Seed">fromBase58Seed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromPublicKey">fromPublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromRawEd25519Seed">fromRawEd25519Seed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.fromSecret">fromSecret</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.master">master</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#.random">random</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#canSign">canSign</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#publicKey">publicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#rawPublicKey">rawPublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#rawSecretKey">rawSecretKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#secret">secret</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#sign">sign</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Keypair.html#verify">verify</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="LedgerCallBuilder.html">LedgerCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Memo.html">Memo</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.fromXDRObject">fromXDRObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.hash">hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.id">id</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.none">none</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.return">return</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#.text">text</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Memo.html#toXDRObject">toXDRObject</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Network.html">Network</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.current">current</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.use">use</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.usePublicNetwork">usePublicNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#.useTestNetwork">useTestNetwork</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#networkId">networkId</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Network.html#networkPassphrase">networkPassphrase</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="OfferCallBuilder.html">OfferCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Operation.html">Operation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.accountMerge">accountMerge</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.allowTrust">allowTrust</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.bumpSequence">bumpSequence</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.changeTrust">changeTrust</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.createAccount">createAccount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.createPassiveSellOffer">createPassiveSellOffer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.fromXDRObject">fromXDRObject</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.inflation">inflation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.manageBuyOffer">manageBuyOffer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.manageData">manageData</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.manageSellOffer">manageSellOffer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.pathPayment">pathPayment</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.payment">payment</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Operation.html#.setOptions">setOptions</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="OperationCallBuilder.html">OperationCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="PaymentCallBuilder.html">PaymentCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Server.html">Server</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="StrKey.html">StrKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodeEd25519PublicKey">decodeEd25519PublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodeEd25519SecretSeed">decodeEd25519SecretSeed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodePreAuthTx">decodePreAuthTx</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.decodeSha256Hash">decodeSha256Hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodeEd25519PublicKey">encodeEd25519PublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodeEd25519SecretSeed">encodeEd25519SecretSeed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodePreAuthTx">encodePreAuthTx</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.encodeSha256Hash">encodeSha256Hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.isValidEd25519PublicKey">isValidEd25519PublicKey</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="StrKey.html#.isValidEd25519SecretSeed">isValidEd25519SecretSeed</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TradeAggregationCallBuilder.html">TradeAggregationCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TradesCallBuilder.html">TradesCallBuilder</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Transaction.html">Transaction</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#addSignature">addSignature</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#getKeypairSignature">getKeypairSignature</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#hash">hash</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#sign">sign</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#signatureBase">signatureBase</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#signHashX">signHashX</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#toEnvelope">toEnvelope</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Transaction.html#toXDR">toXDR</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TransactionBuilder.html">TransactionBuilder</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#addMemo">addMemo</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#addOperation">addOperation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#build">build</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="TransactionBuilder.html#setTimeout">setTimeout</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="TransactionCallBuilder.html">TransactionCallBuilder</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AccountResponse">AccountResponse</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AuthImmutableFlag">AuthImmutableFlag</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AuthRequiredFlag">AuthRequiredFlag</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#AuthRevocableFlag">AuthRevocableFlag</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#Config">Config</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#FastSigning">FastSigning</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getCurrentServerTime">getCurrentServerTime</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#isValidDate">isValidDate</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoHash">MemoHash</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoID">MemoID</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoNone">MemoNone</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoReturn">MemoReturn</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#MemoText">MemoText</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#Networks">Networks</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#OrderbookCallBuilder">OrderbookCallBuilder</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#PathCallBuilder">PathCallBuilder</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#SERVER_TIME_MAP">SERVER_TIME_MAP</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#StellarTomlResolver">StellarTomlResolver</a></span></li><li class="nav-item"><span class="nav-item-type type-member">M</span><span class="nav-item-name"><a href="global.html#TimeoutInfinite">TimeoutInfinite</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/federation_server.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import * as tslib_1 from "tslib";
+import axios from "axios";
+import { StrKey } from "stellar-base";
+import URI from "urijs";
+import { Config } from "./config";
+import { BadResponseError } from "./errors";
+import { StellarTomlResolver } from "./stellar_toml_resolver";
+// FEDERATION_RESPONSE_MAX_SIZE is the maximum size of response from a federation server
+export var FEDERATION_RESPONSE_MAX_SIZE = 100 * 1024;
+/**
+ * FederationServer handles a network connection to a
+ * [federation server](https://www.stellar.org/developers/guides/concepts/federation.html)
+ * instance and exposes an interface for requests to that instance.
+ * @constructor
+ * @param {string} serverURL The federation server URL (ex. `https://acme.com/federation`).
+ * @param {string} domain Domain this server represents
+ * @param {object} [opts] options object
+ * @param {boolean} [opts.allowHttp] - Allow connecting to http servers, default: `false`. This must be set to false in production deployments! You can also use {@link Config} class to set this globally.
+ * @param {number} [opts.timeout] - Allow a timeout, default: 0. Allows user to avoid nasty lag due to TOML resolve issue. You can also use {@link Config} class to set this globally.
+ * @returns {void}
+ */
+var FederationServer = /** @class */ (function () {
+    function FederationServer(serverURL, domain, opts) {
+        if (opts === void 0) { opts = {}; }
+        // TODO `domain` regexp
+        this.serverURL = URI(serverURL);
+        this.domain = domain;
+        var allowHttp = typeof opts.allowHttp === "undefined"
+            ? Config.isAllowHttp()
+            : opts.allowHttp;
+        this.timeout =
+            typeof opts.timeout === "undefined" ? Config.getTimeout() : opts.timeout;
+        if (this.serverURL.protocol() !== "https" &amp;&amp; !allowHttp) {
+            throw new Error("Cannot connect to insecure federation server");
+        }
+    }
+    /**
+     * A helper method for handling user inputs that contain `destination` value.
+     * It accepts two types of values:
+     *
+     * * For Stellar address (ex. `bob*stellar.org`) it splits Stellar address and then tries to find information about
+     * federation server in `stellar.toml` file for a given domain. It returns a `Promise` which resolves if federation
+     * server exists and user has been found and rejects in all other cases.
+     * * For Account ID (ex. `GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS`) it returns a `Promise` which
+     * resolves if Account ID is valid and rejects in all other cases. Please note that this method does not check
+     * if the account actually exists in a ledger.
+     *
+     * Example:
+     * ```js
+     * StellarSdk.FederationServer.resolve('bob*stellar.org')
+     *  .then(federationRecord => {
+     *    // {
+     *    //   account_id: 'GB5XVAABEQMY63WTHDQ5RXADGYF345VWMNPTN2GFUDZT57D57ZQTJ7PS',
+     *    //   memo_type: 'id',
+     *    //   memo: 100
+     *    // }
+     *  });
+     * ```
+     *
+     * @see &lt;a href="https://www.stellar.org/developers/guides/concepts/federation.html" target="_blank">Federation doc&lt;/a>
+     * @see &lt;a href="https://www.stellar.org/developers/guides/concepts/stellar-toml.html" target="_blank">Stellar.toml doc&lt;/a>
+     * @param {string} value Stellar Address (ex. `bob*stellar.org`)
+     * @param {object} [opts] Options object
+     * @param {boolean} [opts.allowHttp] - Allow connecting to http servers, default: `false`. This must be set to false in production deployments!
+     * @param {number} [opts.timeout] - Allow a timeout, default: 0. Allows user to avoid nasty lag due to TOML resolve issue.
+     * @returns {Promise} `Promise` that resolves to a JSON object with this shape:
+     * * `account_id` - Account ID of the destination,
+     * * `memo_type` (optional) - Memo type that needs to be attached to a transaction,
+     * * `memo` (optional) - Memo value that needs to be attached to a transaction.
+     */
+    FederationServer.resolve = function (value, opts) {
+        if (opts === void 0) { opts = {}; }
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var addressParts, domain, federationServer;
+            return tslib_1.__generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        // Check if `value` is in account ID format
+                        if (value.indexOf("*") &lt; 0) {
+                            if (!StrKey.isValidEd25519PublicKey(value)) {
+                                return [2 /*return*/, Promise.reject(new Error("Invalid Account ID"))];
+                            }
+                            return [2 /*return*/, Promise.resolve({ account_id: value })];
+                        }
+                        addressParts = value.split("*");
+                        domain = addressParts[1];
+                        if (addressParts.length !== 2 || !domain) {
+                            return [2 /*return*/, Promise.reject(new Error("Invalid Stellar address"))];
+                        }
+                        return [4 /*yield*/, FederationServer.createForDomain(domain, opts)];
+                    case 1:
+                        federationServer = _a.sent();
+                        return [2 /*return*/, federationServer.resolveAddress(value)];
+                }
+            });
+        });
+    };
+    /**
+     * Creates a `FederationServer` instance based on information from
+     * [stellar.toml](https://www.stellar.org/developers/guides/concepts/stellar-toml.html)
+     * file for a given domain.
+     *
+     * If `stellar.toml` file does not exist for a given domain or it does not
+     * contain information about a federation server Promise will reject.
+     * ```js
+     * StellarSdk.FederationServer.createForDomain('acme.com')
+     *   .then(federationServer => {
+     *     // federationServer.resolveAddress('bob').then(...)
+     *   })
+     *   .catch(error => {
+     *     // stellar.toml does not exist or it does not contain information about federation server.
+     *   });
+     * ```
+     * @see &lt;a href="https://www.stellar.org/developers/guides/concepts/stellar-toml.html" target="_blank">Stellar.toml doc&lt;/a>
+     * @param {string} domain Domain to get federation server for
+     * @param {object} [opts] Options object
+     * @param {boolean} [opts.allowHttp] - Allow connecting to http servers, default: `false`. This must be set to false in production deployments!
+     * @param {number} [opts.timeout] - Allow a timeout, default: 0. Allows user to avoid nasty lag due to TOML resolve issue.
+     * @returns {Promise} `Promise` that resolves to a FederationServer object
+     */
+    FederationServer.createForDomain = function (domain, opts) {
+        if (opts === void 0) { opts = {}; }
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var tomlObject;
+            return tslib_1.__generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, StellarTomlResolver.resolve(domain, opts)];
+                    case 1:
+                        tomlObject = _a.sent();
+                        if (!tomlObject.FEDERATION_SERVER) {
+                            return [2 /*return*/, Promise.reject(new Error("stellar.toml does not contain FEDERATION_SERVER field"))];
+                        }
+                        return [2 /*return*/, new FederationServer(tomlObject.FEDERATION_SERVER, domain, opts)];
+                }
+            });
+        });
+    };
+    /**
+     * Get the federation record if the user was found for a given Stellar address
+     * @see &lt;a href="https://www.stellar.org/developers/guides/concepts/federation.html" target="_blank">Federation doc&lt;/a>
+     * @param {string} address Stellar address (ex. `bob*stellar.org`). If `FederationServer` was instantiated with `domain` param only username (ex. `bob`) can be passed.
+     * @returns {Promise} Promise that resolves to the federation record
+     */
+    FederationServer.prototype.resolveAddress = function (address) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var stellarAddress, url;
+            return tslib_1.__generator(this, function (_a) {
+                stellarAddress = address;
+                if (address.indexOf("*") &lt; 0) {
+                    if (!this.domain) {
+                        return [2 /*return*/, Promise.reject(new Error("Unknown domain. Make sure `address` contains a domain (ex. `bob*stellar.org`) or pass `domain` parameter when instantiating the server object."))];
+                    }
+                    stellarAddress = address + "*" + this.domain;
+                }
+                url = this.serverURL.query({ type: "name", q: stellarAddress });
+                return [2 /*return*/, this._sendRequest(url)];
+            });
+        });
+    };
+    /**
+     * Given an account ID, get their federation record if the user was found
+     * @see &lt;a href="https://www.stellar.org/developers/guides/concepts/federation.html" target="_blank">Federation doc&lt;/a>
+     * @param {string} accountId Account ID (ex. `GBYNR2QJXLBCBTRN44MRORCMI4YO7FZPFBCNOKTOBCAAFC7KC3LNPRYS`)
+     * @returns {Promise} A promise that resolves to the federation record
+     */
+    FederationServer.prototype.resolveAccountId = function (accountId) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var url;
+            return tslib_1.__generator(this, function (_a) {
+                url = this.serverURL.query({ type: "id", q: accountId });
+                return [2 /*return*/, this._sendRequest(url)];
+            });
+        });
+    };
+    /**
+     * Given a transactionId, get the federation record if the sender of the transaction was found
+     * @see &lt;a href="https://www.stellar.org/developers/guides/concepts/federation.html" target="_blank">Federation doc&lt;/a>
+     * @param {string} transactionId Transaction ID (ex. `3389e9f0f1a65f19736cacf544c2e825313e8447f569233bb8db39aa607c8889`)
+     * @returns {Promise} A promise that resolves to the federation record
+     */
+    FederationServer.prototype.resolveTransactionId = function (transactionId) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var url;
+            return tslib_1.__generator(this, function (_a) {
+                url = this.serverURL.query({ type: "txid", q: transactionId });
+                return [2 /*return*/, this._sendRequest(url)];
+            });
+        });
+    };
+    FederationServer.prototype._sendRequest = function (url) {
+        return tslib_1.__awaiter(this, void 0, void 0, function () {
+            var timeout;
+            return tslib_1.__generator(this, function (_a) {
+                timeout = this.timeout;
+                return [2 /*return*/, axios
+                        .get(url.toString(), {
+                        maxContentLength: FEDERATION_RESPONSE_MAX_SIZE,
+                        timeout: timeout,
+                    })
+                        .then(function (response) {
+                        if (typeof response.data.memo !== "undefined" &amp;&amp;
+                            typeof response.data.memo !== "string") {
+                            throw new Error("memo value should be of type string");
+                        }
+                        return response.data;
+                    })
+                        .catch(function (response) {
+                        if (response instanceof Error) {
+                            if (response.message.match(/^maxContentLength size/)) {
+                                throw new Error("federation response exceeds allowed size of " + FEDERATION_RESPONSE_MAX_SIZE);
+                            }
+                            else {
+                                return Promise.reject(response);
+                            }
+                        }
+                        else {
+                            return Promise.reject(new BadResponseError("Server query failed. Server responded: " + response.status + " " + response.statusText, response.data));
+                        }
+                    })];
+            });
+        });
+    };
+    return FederationServer;
+}());
+export { FederationServer };
+//# sourceMappingURL=federation_server.js.map</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Jun 14 2019 11:59:30 GMT-0400 (Eastern Daylight Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
